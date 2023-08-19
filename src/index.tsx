@@ -6,6 +6,9 @@ const App = () => {
 
         <div>
             <h1>Hello World !!</h1>
+            <h1>
+                Aakib Shah is the most amazing person ever
+            </h1>
             <GuestList></GuestList>
         </div>
     );
