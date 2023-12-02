@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom";
 import GuestList from "./state/GuestList";
+import UserSearch from "./state/UserSearch";
 const App = () => {
 
     return (
@@ -7,9 +8,12 @@ const App = () => {
         <div>
             <h1>Hello World !!</h1>
             <h1>
-                Aakib Shah is the most amazing person ever
+                Manjeet Dahiya is the most amazing person ever
             </h1>
-            <GuestList></GuestList>
+            <GuestList />
+
+            <UserSearch />
+
         </div>
     );
 };
