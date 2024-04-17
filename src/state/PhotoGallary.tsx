@@ -51,7 +51,7 @@ const PhotoGallery: React.FC = () => {
 
   return (
     <div>
-      <h2 style={{ textAlign: "center" }}>Slideshow Gallery</h2>
+      <h2 style={{ textAlign: "center" }}>Slideshow Gallery TEST</h2>
 
       <div className="container">
         <div className="mySlides">
