@@ -6,7 +6,7 @@ const PhotoGallery: React.FC = () => {
   const [slideIndex, setSlideIndex] = useState<number>(1);
 
   useEffect(() => {
-    showSlides(slideIndex);
+    // showSlides(slideIndex);
   }, []); // Empty dependency array ensures this effect runs only once after initial render
 
   function plusSlides(n: number) {
@@ -103,9 +103,13 @@ const PhotoGallery: React.FC = () => {
           />
         </div>
 
-        <a className="prev" onClick={() => plusSlides(-1)}></a>
+        <a className="prev" href="/" onClick={() => plusSlides(-1)}>
+          asdsad
+        </a>
 
-        <a className="prev" onClick={() => plusSlides(1)}></a>
+        <a className="prev" href="/" onClick={() => plusSlides(1)}>
+          asds
+        </a>
         <div className="caption-container">
           <p id="caption"></p>
         </div>
