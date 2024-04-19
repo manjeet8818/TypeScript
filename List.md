@@ -22,3 +22,6 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_portfolio_gallery_f
         sudo npm install -g npm@latest
         Sudo means that it will install for every project rather than just in one project
     ]
+
+Romos for learning code
+https://www.freecodecamp.org/learn/back-end-development-and-apis/managing-packages-with-npm/how-to-use-package-json-the-core-of-any-node-js-project-or-npm-package
