@@ -111,22 +111,22 @@ const PhotoGallery: React.FC = () => {
           href="/"
           onClick={(event) => {
             event.preventDefault();
-            plusSlides(-1);
-          }}
-        >
-          Previous
-        </a>
-
-        <a
-          className="prev"
-          href="/"
-          onClick={(event) => {
-            event.preventDefault();
             plusSlides(1);
           }}
         >
-          Next
+          ❮
         </a>
+        <a
+          className="next"
+          href="/"
+          onClick={(event) => {
+            event.preventDefault();
+            plusSlides(-1);
+          }}
+        >
+          ❯
+        </a>
+
         <div className="caption-container">
           <p id="caption"></p>
         </div>
