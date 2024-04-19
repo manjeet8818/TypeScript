@@ -111,7 +111,7 @@ const PhotoGallery: React.FC = () => {
           href="/"
           onClick={(event) => {
             event.preventDefault();
-            plusSlides(1);
+            plusSlides(-1);
           }}
         >
           ❮
@@ -121,7 +121,7 @@ const PhotoGallery: React.FC = () => {
           href="/"
           onClick={(event) => {
             event.preventDefault();
-            plusSlides(-1);
+            plusSlides(1);
           }}
         >
           ❯
