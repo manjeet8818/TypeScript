@@ -1,23 +1,11 @@
 import "../resources/css/styles/CSS.css";
 import "../resources/css/styles/ImageGallary.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 const PhotoGallery: React.FC = () => {
   const [slideIndex, setSlideIndex] = useState<number>(1);
 
-  useEffect(() => {
-    // showSlides(slideIndex);
-  }, []); // Empty dependency array ensures this effect runs only once after initial render
-
-  function plusSlides(n: number) {
-    showSlides(slideIndex + n);
-  }
-
-  function currentSlide(n: number) {
-    showSlides(n);
-  }
-
-  function showSlides(n: number) {
+  const showSlides = useCallback((n: number) => {
     let i: number;
     const slides: HTMLCollectionOf<Element> =
       document.getElementsByClassName("mySlides");
@@ -27,9 +15,11 @@ const PhotoGallery: React.FC = () => {
 
     if (n > slides.length) {
       setSlideIndex(1);
+      return;
     }
     if (n < 1) {
       setSlideIndex(slides.length);
+      return;
     }
 
     for (i = 0; i < slides.length; i++) {
@@ -40,14 +30,27 @@ const PhotoGallery: React.FC = () => {
         dots[i] as HTMLElement
       ).className.replace(" active", "");
     }
-    (slides[slideIndex - 1] as HTMLElement).style.display = "block";
-    (dots[slideIndex - 1] as HTMLElement).className += " active";
+    (slides[n - 1] as HTMLElement).style.display = "block";
+    (dots[n - 1] as HTMLElement).className += " active";
 
     if (captionText) {
       captionText.innerHTML =
-        (dots[slideIndex - 1] as HTMLElement).getAttribute("alt") || "";
+        (dots[n - 1] as HTMLElement).getAttribute("alt") || "";
     }
-  }
+    setSlideIndex(n);
+  }, []); // Empty dependency array because showSlides doesn't depend on any external variables
+
+  useEffect(() => {
+    showSlides(slideIndex);
+  }, [slideIndex, showSlides]); // Dependency array should include showSlides and slideIndex
+
+  const plusSlides = (n: number) => {
+    showSlides(slideIndex + n);
+  };
+
+  const currentSlide = (n: number) => {
+    showSlides(n);
+  };
 
   return (
     <div>
@@ -103,12 +106,26 @@ const PhotoGallery: React.FC = () => {
           />
         </div>
 
-        <a className="prev" href="/" onClick={() => plusSlides(-1)}>
-          asdsad
+        <a
+          className="prev"
+          href="/"
+          onClick={(event) => {
+            event.preventDefault();
+            plusSlides(-1);
+          }}
+        >
+          Previous
         </a>
 
-        <a className="prev" href="/" onClick={() => plusSlides(1)}>
-          asds
+        <a
+          className="prev"
+          href="/"
+          onClick={(event) => {
+            event.preventDefault();
+            plusSlides(1);
+          }}
+        >
+          Next
         </a>
         <div className="caption-container">
           <p id="caption"></p>
