@@ -1,30 +1,37 @@
+import * as React from 'react'
+import { HashRouter as Router, Route, Link, Routes } from 'react-router-dom'
+import { render } from 'react-dom';
+import {Home, Foo, Bar} from './Page';
 import PhotoGallary from "./state/PhotoGallary";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
+import GuestList from './state/GuestList';
+import UserSearch from './state/UserSearch';
 
-// const App = () => {
-const App: React.FC = () => {
-  return (
-    <div>
-      <div className="App">
-        <header className="App-header">
-          <h1>Welcome to the Photo Gallary </h1>
-        </header>
-      </div>
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <div>
+          <div className="App">
+            <header className="App-header">
+              <h1>Welcome to the Photo Gallary </h1>
+            </header>
+          </div>
+          <nav>
+            <Link to="/">Home</Link>&nbsp;
+            <Link to="/gallery">Gallery</Link>&nbsp;
+            <Link to="/guest">Guest List</Link>&nbsp;
+            <Link to="/user">User Search</Link>&nbsp;
+          </nav>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/gallery" element={<PhotoGallary/>} />
+            <Route path="/guest" element={<GuestList/>} />
+            <Route path="/user" element={<UserSearch/>} />
+          </Routes>
+        </div>
+      </Router>
+    );
+  }
+}
 
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="contact" element={<Contact />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-
-      <PhotoGallary />
-    </div>
-  );
-};
-export default App;
+render(<App />, document.getElementById('root'));
