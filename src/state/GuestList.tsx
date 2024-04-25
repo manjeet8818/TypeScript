@@ -1,4 +1,8 @@
 import { useState } from 'react'
+import React from 'react';
+
+// Your component code here
+
 
 const GuestList: React.FC = () => {
     const [name, setName] = useState('');

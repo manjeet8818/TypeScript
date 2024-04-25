@@ -1,5 +1,9 @@
 // import React from "react";
 
+import React from 'react';
+
+// Your component code here
+
 interface ChildProps {
   color: string;
   onClick: () => void;

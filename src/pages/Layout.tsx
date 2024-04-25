@@ -1,4 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
+import React from "react";
+
+// Your component code here
 
 const Layout = () => {
   return (
