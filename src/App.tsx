@@ -5,6 +5,7 @@ import PhotoGallary from "./state/PhotoGallary";
 import UserSearch from "./state/UserSearch";
 import Nav from "./Nav";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LeetCode from "./state/LeetCode";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/gallery" element={<PhotoGallary />} />
           <Route path="/guest" element={<GuestList />} />
           <Route path="/user" element={<UserSearch />} />
+          <Route path="/code" element={<LeetCode />} />
         </Routes>
       </div>
     </Router>

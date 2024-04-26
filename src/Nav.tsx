@@ -12,6 +12,7 @@ export default function Nav() {
         <Link to="/gallery">Gallery</Link>&nbsp;
         <Link to="/guest">Guest List</Link>&nbsp;
         <Link to="/user">User Search</Link>&nbsp;
+        <Link to="/code">Leet Code</Link>&nbsp;
       </nav>
     </div>
   );
