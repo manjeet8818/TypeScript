@@ -17,21 +17,9 @@ const LeetCode: React.FC = () => {
   const [results, setResults] = useState<number[][]>([]);
 
   // // Example inputs
-  // const nums1 = [2, 7, 11, 15];
-  // const target1 = 9;
-  // const nums2 = [3, 2, 4];
-  // const target2 = 6;
-  // const nums3 = [3, 3];
-  // const target3 = 6;
 
-  // // Function to calculate results and update state
-  // useEffect(() => {
-  //   setResults([
-  //     twoSum(nums1, target1),
-  //     twoSum(nums2, target2),
-  //     twoSum(nums3, target3),
-  //   ]);
-  // }, [nums1, nums2, nums3]); // Include the missing dependencies in the dependency array
+  // Function to calculate results and update state
+  //  Include the missing dependencies in the dependency array
 
   useEffect(() => {
     const nums1 = [2, 7, 11, 15];
