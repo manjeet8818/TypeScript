@@ -25,13 +25,13 @@ const LeetCode: React.FC = () => {
   const target3 = 6;
 
   // Function to calculate results and update state
-  // useEffect(() => {
-  //   setResults([
-  //     twoSum(nums1, target1),
-  //     twoSum(nums2, target2),
-  //     twoSum(nums3, target3),
-  //   ]);
-  // }, []); // Empty dependency array ensures this effect runs only once
+  useEffect(() => {
+    setResults([
+      twoSum(nums1, target1),
+      twoSum(nums2, target2),
+      twoSum(nums3, target3),
+    ]);
+  }, []); // Empty dependency array ensures this effect runs only once
 
   return (
     <div>
