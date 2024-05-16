@@ -31,7 +31,9 @@ const LeetCode: React.FC = () => {
       twoSum(nums2, target2),
       twoSum(nums3, target3),
     ]);
-  }, []); // Empty dependency array ensures this effect runs only once
+  }, [nums1, nums2, nums3]); // Include the missing dependencies in the dependency array
+
+  // Empty dependency array ensures this effect runs only once
 
   return (
     <div>
