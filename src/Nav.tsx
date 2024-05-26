@@ -8,6 +8,7 @@ export default function Nav() {
       <div className="log">Shopio</div>
 
       <nav className="nav-links">
+        <Link to="/">Login1</Link>&nbsp;
         <Link to="/">Login</Link>&nbsp;
         <Link to="/gallery">Gallery</Link>&nbsp;
         <Link to="/guest">Guest List</Link>&nbsp;
