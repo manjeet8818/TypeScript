@@ -1,6 +1,5 @@
 import React from "react";
 import "../resources/css/styles/style.css";
-import YourComponent from "../resources/css/js_files/script";
 
 const Login1: React.FC = () => {
   return (
