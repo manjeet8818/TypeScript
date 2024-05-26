@@ -1,6 +1,4 @@
-import { Context } from './custom-cloudflare-worker-types';
-
-export async function onRequestPost(context: Context): Promise<Response> {
+export async function onRequestPost(context: any): Promise<Response> {
   const formData = await context.request.formData();
   const username = formData.get('user-name-1') as string;
   const email = formData.get('email-2') as string;
