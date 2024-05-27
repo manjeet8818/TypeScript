@@ -75,19 +75,16 @@
 
 import React from "react";
 import "../resources/css/styles/style.css";
-import YourComponent from "../resources/css/js_files/script";
 
 const Login: React.FC = () => {
   return (
-    // <div className="login-page">
-    //   <YourComponent />
-    // </div>
-
-
-    
-
-<YourComponent />
-
+    <div className="login-page">
+      <form action="register-user" method="POST">
+        <input type="text" name="user-name-17" id="" />
+        <input type="text" name="email-2" id="" />
+        <input type="submit" value="submit" />
+      </form>
+    </div>
   );
 };
 
