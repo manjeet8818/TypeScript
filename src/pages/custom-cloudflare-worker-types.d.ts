@@ -9,7 +9,7 @@ interface Request {
 }
 
 interface Environment {
-  USER_DATA_STORE: {
+  USER_DATA_STORE1: {
     put(username: string, email: string): Promise<void>;
   };
 }

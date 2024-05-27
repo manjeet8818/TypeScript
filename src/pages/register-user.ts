@@ -8,7 +8,7 @@ export async function onRequestPost(context: Context): Promise<Response> {
   const email = formData.get('email-2') as string;
 
   if (username && email) {
-    await context.env.USER_DATA_STORE.put(username, email);
+    await context.env.USER_DATA_STORE1.put(username, email);
     return new Response(`${username} - ${email}`);
   } else {
     return new Response('Invalid form data', { status: 400 });
