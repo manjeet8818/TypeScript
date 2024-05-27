@@ -16,9 +16,6 @@ const Layout = () => {
           </li>
         </ul>
       </nav>
-
-      <div>sdsadasd</div>
-
       <Outlet />
     </>
   );
