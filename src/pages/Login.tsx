@@ -79,6 +79,7 @@ import "../resources/css/styles/style.css";
 const Login: React.FC = () => {
   return (
     <div className="login-page">
+      <h1>WHats upppppp</h1>
       <form action="register-user" method="POST">
         <input type="text" name="user-name-17" id="" />
         <input type="text" name="email-2" id="" />

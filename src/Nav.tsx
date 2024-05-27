@@ -9,7 +9,7 @@ export default function Nav() {
 
       <nav className="nav-links">
         <Link to="/">Login1</Link>&nbsp;
-        <Link to="/">Login</Link>&nbsp;
+        <Link to="/login">Login</Link>&nbsp;
         <Link to="/gallery">Gallery</Link>&nbsp;
         <Link to="/guest">Guest List</Link>&nbsp;
         <Link to="/user">User Search</Link>&nbsp;

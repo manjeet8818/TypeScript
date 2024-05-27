@@ -50,7 +50,7 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<UserForm /> } />
-          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/gallery" element={<PhotoGallary />} />
           <Route path="/guest" element={<GuestList />} />
           <Route path="/user" element={<UserSearch />} />
