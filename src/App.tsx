@@ -40,7 +40,7 @@ import UserSearch from "./state/UserSearch";
 import Nav from "./Nav";
 import LeetCode from "./state/LeetCode";
 import Login from "./pages/Login";
-import Login1 from "./pages/Login1";
+import UserForm from "./pages/UserForm";
 
 export default function App() {
   return (
@@ -49,7 +49,7 @@ export default function App() {
         <Nav />
 
         <Routes>
-          <Route path="/" element={<Login1 />} />
+          <Route path="/" element={<UserForm /> } />
           <Route path="/" element={<Login />} />
           <Route path="/gallery" element={<PhotoGallary />} />
           <Route path="/guest" element={<GuestList />} />
