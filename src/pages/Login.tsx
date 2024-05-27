@@ -80,7 +80,7 @@ const Login: React.FC = () => {
   return (
     <div className="login-page">
       <h1>WHats upppppp</h1>
-      <form action="register-user" method="POST">
+      <form action="/api/register-user" method="POST">
         <input type="text" name="user-name-17" id="" />
         <input type="text" name="email-2" id="" />
         <input type="submit" value="submit" />
