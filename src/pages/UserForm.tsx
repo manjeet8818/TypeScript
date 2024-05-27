@@ -22,6 +22,7 @@ const UserForm: React.FC = () => {
             setResponse(text);
         } catch (error) {
             console.error('Error:', error);
+            setResponse('Error occurred');
         }
     };
 
