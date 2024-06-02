@@ -14,7 +14,7 @@ function Login() {
 
         try{
 
-            await axios.post("http://localhost:3000/signup",{
+            await axios.post("https://typescript-43q.pages.dev/signup",{
                 email,password
             })
             .then(res=>{
