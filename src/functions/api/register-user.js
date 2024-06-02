@@ -17,7 +17,7 @@ export async function onRequestPost(context) {
     await context.env.USER_DATA_STORE1.put(username, email);
   
     return new Response(`${username} - ${email}`, {
-      headers: { 'Content-Type': 'text/plain' },
+      headers: { 'Content-Type': 'text/plain' },m
     });
   }
   
