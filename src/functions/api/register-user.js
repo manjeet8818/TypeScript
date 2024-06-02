@@ -1,11 +1,26 @@
 
+// export async function onRequestPost(context) {
+// const formdata = await context.request.formData();
+// const username = formdata.get('user-name-1');
+// const email = formdata.get('email-2');
+// await context.env.USER_DATA_STORE1.put(username, email);
+// return new Response(`${username} - ${email}`);
+// }
+
+// src/functions/api/register-user.js
 export async function onRequestPost(context) {
-const formdata = await context.request.formData();
-const username = formdata.get('user-name-1');
-const email = formdata.get('email-2');
-await context.env.USER_DATA_STORE1.put(username, email);
-return new Response(`${username} - ${email}`);
-}
+    const formData = await context.request.formData();
+    const username = formData.get('user-name-1');
+    const email = formData.get('email-2');
+  
+    // Assuming USER_DATA_STORE1 is a key-value storage (like Workers KV or a similar service)
+    await context.env.USER_DATA_STORE1.put(username, email);
+  
+    return new Response(`${username} - ${email}`, {
+      headers: { 'Content-Type': 'text/plain' },
+    });
+  }
+  
 
 
 // const express = require('express');
