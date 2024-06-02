@@ -56,6 +56,8 @@ export default function App() {
           <Route path="/user" element={<UserSearch />} />
           <Route path="/code" element={<LeetCode />} />
         </Routes>
+
+        
       </div>
     </Router>
   );

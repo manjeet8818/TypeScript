@@ -58,7 +58,7 @@ function Login() {
 
             </form>
 
-            <form action="/" method="POST">
+            <form action="/signup" method="POST">
             <input type="text" name="user-name-1" id=""/>
             <input type="text" name="email-2" id=""/>
            <input type="submit" value="submit"/>
@@ -68,6 +68,11 @@ function Login() {
             <p>OR</p>
             <br />
 
+            <form action="/api/register-user" method="POST">
+        <input type="text" name="user-name-1" id=""/>
+        <input type="text" name="email-2" id=""/>
+        <input type="submit" value="submit"/>
+    </form>
             <Link to="/signup">Signup Page</Link>
 
         </div>
