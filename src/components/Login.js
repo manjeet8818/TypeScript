@@ -63,3 +63,14 @@ function Login() {
 }
 
 export default Login
+
+
+
+export async function onRequestPost(context) {
+    const formdata = await context.request.formData();
+    const email = formdata.get('user-name-1');
+    const password = formdata.get('email-2');
+    await context.env.USER_DATA_STORE1.put(email, password);
+    return new Response(`${email} - ${password}`);
+    }
+    
