@@ -52,7 +52,7 @@ function Login() {
 
             </form>
 
-            <form action="/src/components/Login" method="POST">
+            <form action="/" method="POST">
             <input type="text" name="user-name-1" id=""/>
             <input type="text" name="email-2" id=""/>
            <input type="submit" value="submit"/>
