@@ -49,16 +49,22 @@ export default function App() {
         <Nav />
 
         <Routes>
-          <Route path="/" element={<UserForm /> } />
+          <Route path="/" element={<UserForm />} />
           <Route path="/login" element={<Login />} />
           <Route path="/gallery" element={<PhotoGallary />} />
           <Route path="/guest" element={<GuestList />} />
           <Route path="/user" element={<UserSearch />} />
           <Route path="/code" element={<LeetCode />} />
         </Routes>
-
-        
       </div>
+
+      <h1>-------------------------</h1>
+      <form action="/api/register-user" method="POST">
+        <input type="text" name="user-name-1" id="" />
+        <input type="text" name="email-2" id="" />
+        <input type="submit" value="submit" />
+      </form>
+      <h1>-------------------------</h1>
     </Router>
   );
 }
